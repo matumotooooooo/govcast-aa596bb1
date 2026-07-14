@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AIガバナンス・デイリー スライド — 2026年7月15日</title>
+<style>
+  :root {
+    color-scheme: dark light;
+    --bg: #0b0d12;
+    --fg: #f2f4f8;
+    --accent: #7dd3fc;
+    --muted: #9aa4b2;
+    --card: #151a23;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #f7f8fa;
+      --fg: #14181f;
+      --accent: #0369a1;
+      --muted: #5b6472;
+      --card: #ffffff;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: "Hiragino Sans", "Yu Gothic", "Noto Sans JP", -apple-system,
+      BlinkMacSystemFont, sans-serif;
+  }
+  .slide {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5vw 6vw;
+    position: relative;
+    overflow: hidden;
+  }
+  .slide + .slide {
+    border-top: 2px solid var(--muted);
+  }
+  .kicker {
+    font-size: clamp(14px, 1.6vw, 20px);
+    color: var(--accent);
+    font-weight: 700;
+    letter-spacing: .05em;
+    margin-bottom: 2vh;
+  }
+  .message {
+    font-size: clamp(26px, 4vw, 52px);
+    font-weight: 800;
+    line-height: 1.35;
+    margin: 0 0 3vh 0;
+  }
+  .points {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: clamp(17px, 2.1vw, 27px);
+    line-height: 1.6;
+  }
+  .points li {
+    margin: 0.6em 0;
+    padding-left: 1.3em;
+    position: relative;
+  }
+  .points li::before {
+    content: "▸";
+    color: var(--accent);
+    position: absolute;
+    left: 0;
+  }
+  .analogy {
+    margin-top: 3vh;
+    font-size: clamp(15px, 1.7vw, 21px);
+    color: var(--muted);
+    border-left: 4px solid var(--accent);
+    padding: 0.4em 0 0.4em 1em;
+  }
+  .title2 {
+    font-size: clamp(22px, 3vw, 38px);
+    font-weight: 800;
+    margin-bottom: 3vh;
+  }
+  .timeline {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: step;
+    font-size: clamp(16px, 1.9vw, 24px);
+    line-height: 1.6;
+  }
+  .timeline li {
+    counter-increment: step;
+    margin: 0.7em 0;
+    padding-left: 2.2em;
+    position: relative;
+  }
+  .timeline li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1.6em;
+    height: 1.6em;
+    line-height: 1.6em;
+    text-align: center;
+    border-radius: 50%;
+    background: var(--accent);
+    color: var(--bg);
+    font-weight: 800;
+    font-size: 0.8em;
+  }
+  .footer {
+    position: absolute;
+    bottom: 3vh;
+    right: 5vw;
+    font-size: clamp(11px, 1.1vw, 14px);
+    color: var(--muted);
+  }
+</style>
+</head>
+<body>
+<section class="slide slide1">
+  <div class="kicker">AIガバナンス・デイリー ・ 2026年7月15日</div>
+  <p class="message">欧州議会がSNSとAIコンパニオンへの規制執行強化を提言、既存ルールの実効性確保に焦点</p>
+  <ul class="points">
+    <li>CULT委員会がアルゴリズム透明性・ユースモード・AIコンパニオン倫理基準を提言</li>
+    <li>Eurobarometer調査と児童安全特別パネルの動きが政治的機運を後押し</li>
+    <li>EU域外事業者にも将来の規制トレンドとして波及する可能性</li>
+  </ul>
+  <div class="analogy">たとえるなら: 制限速度の標識は既にあるのに取り締まる警察官が足りない状態で、今回の提言はその取り締まりを強化する話だ</div>
+  <div class="footer">Slide 1 / 2</div>
+</section>
+<section class="slide slide2">
+  <div class="title2">AIガバナンス関連動向まとめ(規制執行・産業基盤・社会的リスク)</div>
+  <ol class="timeline">
+    <li>欧州議会がSNS・AIコンパニオン規制の執行強化を提言</li>
+    <li>外国補助金規制(FSR)は制度として有効と評価</li>
+    <li>ドイツ半導体4施設へ約6.6億ユーロの国家補助を承認</li>
+    <li>経済学者・ノーベル賞受賞者らがAIによる雇用喪失に警鐘</li>
+    <li>ディープフェイク詐欺・金融セクターへのAIサイバー攻撃が具体化</li>
+  </ol>
+  <div class="footer">Slide 2 / 2</div>
+</section>
+</body>
+</html>
