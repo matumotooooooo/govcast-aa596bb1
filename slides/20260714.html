@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AIガバナンス・デイリー スライド — 2026年7月14日</title>
+<style>
+  :root {
+    color-scheme: dark light;
+    --bg: #0b0d12;
+    --fg: #f2f4f8;
+    --accent: #7dd3fc;
+    --muted: #9aa4b2;
+    --card: #151a23;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #f7f8fa;
+      --fg: #14181f;
+      --accent: #0369a1;
+      --muted: #5b6472;
+      --card: #ffffff;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: "Hiragino Sans", "Yu Gothic", "Noto Sans JP", -apple-system,
+      BlinkMacSystemFont, sans-serif;
+  }
+  .slide {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5vw 6vw;
+    position: relative;
+    overflow: hidden;
+  }
+  .slide + .slide {
+    border-top: 2px solid var(--muted);
+  }
+  .kicker {
+    font-size: clamp(14px, 1.6vw, 20px);
+    color: var(--accent);
+    font-weight: 700;
+    letter-spacing: .05em;
+    margin-bottom: 2vh;
+  }
+  .message {
+    font-size: clamp(26px, 4vw, 52px);
+    font-weight: 800;
+    line-height: 1.35;
+    margin: 0 0 3vh 0;
+  }
+  .points {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: clamp(17px, 2.1vw, 27px);
+    line-height: 1.6;
+  }
+  .points li {
+    margin: 0.6em 0;
+    padding-left: 1.3em;
+    position: relative;
+  }
+  .points li::before {
+    content: "▸";
+    color: var(--accent);
+    position: absolute;
+    left: 0;
+  }
+  .analogy {
+    margin-top: 3vh;
+    font-size: clamp(15px, 1.7vw, 21px);
+    color: var(--muted);
+    border-left: 4px solid var(--accent);
+    padding: 0.4em 0 0.4em 1em;
+  }
+  .title2 {
+    font-size: clamp(22px, 3vw, 38px);
+    font-weight: 800;
+    margin-bottom: 3vh;
+  }
+  .timeline {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: step;
+    font-size: clamp(16px, 1.9vw, 24px);
+    line-height: 1.6;
+  }
+  .timeline li {
+    counter-increment: step;
+    margin: 0.7em 0;
+    padding-left: 2.2em;
+    position: relative;
+  }
+  .timeline li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1.6em;
+    height: 1.6em;
+    line-height: 1.6em;
+    text-align: center;
+    border-radius: 50%;
+    background: var(--accent);
+    color: var(--bg);
+    font-weight: 800;
+    font-size: 0.8em;
+  }
+  .footer {
+    position: absolute;
+    bottom: 3vh;
+    right: 5vw;
+    font-size: clamp(11px, 1.1vw, 14px);
+    color: var(--muted);
+  }
+</style>
+</head>
+<body>
+<section class="slide slide1">
+  <div class="kicker">AIガバナンス・デイリー ・ 2026年7月14日</div>
+  <p class="message">EUが子供のオンライン安全とAIガバナンスを結びつけ、規制強化への地ならしを始めた</p>
+  <ul class="points">
+    <li>フォン・デア・ライエン委員長が特別パネルの調査結果に謝意を表明</li>
+    <li>Eurobarometer調査でオンラインの子供リスクへの強い懸念が判明</li>
+    <li>生成AIによるディープフェイクが新たな脅威として浮上</li>
+  </ul>
+  <div class="analogy">たとえるなら: GDPRがプライバシー基準を世界に広げたように、今回の動きも国境を越えてAI利用の事実上の基準になっていく可能性があります</div>
+  <div class="footer">Slide 1 / 2</div>
+</section>
+<section class="slide slide2">
+  <div class="title2">子供のオンライン安全とAIリスクをめぐる一週間の動き</div>
+  <ol class="timeline">
+    <li>EU特別パネルが子供のオンライン安全の調査結果を報告</li>
+    <li>Eurobarometer調査で市民の強い懸念が判明</li>
+    <li>ボコ・ハラムがAIチャットボットを攻撃準備に悪用</li>
+    <li>Grok Buildで機密情報が漏洩</li>
+    <li>MetaとGoogleにAI駆動機能をめぐる賠償命令</li>
+  </ol>
+  <div class="footer">Slide 2 / 2</div>
+</section>
+</body>
+</html>
