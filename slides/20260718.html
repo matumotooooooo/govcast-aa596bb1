@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AIガバナンス・デイリー スライド — 2026年7月18日</title>
+<style>
+  :root {
+    color-scheme: dark light;
+    --bg: #0b0d12;
+    --fg: #f2f4f8;
+    --accent: #7dd3fc;
+    --muted: #9aa4b2;
+    --card: #151a23;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #f7f8fa;
+      --fg: #14181f;
+      --accent: #0369a1;
+      --muted: #5b6472;
+      --card: #ffffff;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: "Hiragino Sans", "Yu Gothic", "Noto Sans JP", -apple-system,
+      BlinkMacSystemFont, sans-serif;
+  }
+  .slide {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5vw 6vw;
+    position: relative;
+    overflow: hidden;
+  }
+  .slide + .slide {
+    border-top: 2px solid var(--muted);
+  }
+  .kicker {
+    font-size: clamp(14px, 1.6vw, 20px);
+    color: var(--accent);
+    font-weight: 700;
+    letter-spacing: .05em;
+    margin-bottom: 2vh;
+  }
+  .message {
+    font-size: clamp(26px, 4vw, 52px);
+    font-weight: 800;
+    line-height: 1.35;
+    margin: 0 0 3vh 0;
+  }
+  .points {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: clamp(17px, 2.1vw, 27px);
+    line-height: 1.6;
+  }
+  .points li {
+    margin: 0.6em 0;
+    padding-left: 1.3em;
+    position: relative;
+  }
+  .points li::before {
+    content: "▸";
+    color: var(--accent);
+    position: absolute;
+    left: 0;
+  }
+  .analogy {
+    margin-top: 3vh;
+    font-size: clamp(15px, 1.7vw, 21px);
+    color: var(--muted);
+    border-left: 4px solid var(--accent);
+    padding: 0.4em 0 0.4em 1em;
+  }
+  .title2 {
+    font-size: clamp(22px, 3vw, 38px);
+    font-weight: 800;
+    margin-bottom: 3vh;
+  }
+  .timeline {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: step;
+    font-size: clamp(16px, 1.9vw, 24px);
+    line-height: 1.6;
+  }
+  .timeline li {
+    counter-increment: step;
+    margin: 0.7em 0;
+    padding-left: 2.2em;
+    position: relative;
+  }
+  .timeline li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1.6em;
+    height: 1.6em;
+    line-height: 1.6em;
+    text-align: center;
+    border-radius: 50%;
+    background: var(--accent);
+    color: var(--bg);
+    font-weight: 800;
+    font-size: 0.8em;
+  }
+  .footer {
+    position: absolute;
+    bottom: 3vh;
+    right: 5vw;
+    font-size: clamp(11px, 1.1vw, 14px);
+    color: var(--muted);
+  }
+</style>
+</head>
+<body>
+<section class="slide slide1">
+  <div class="kicker">AIガバナンス・デイリー ・ 2026年7月18日</div>
+  <p class="message">AIで作られた偽画像による性被害が世界で急増し、企業自身も法的対応に動き出している</p>
+  <ul class="points">
+    <li>スペイン・インドネシア・ブラジルで偽ヌード・性的画像の生成事件が相次ぐ</li>
+    <li>xAIが自社チャットボット悪用ユーザーを提訴する異例の対応</li>
+    <li>画像生成AIの精度向上とアプリの普及が被害拡大の背景に</li>
+  </ul>
+  <div class="analogy">たとえるなら: まるで鍵のかかっていない家が急に増えたようなもので、技術が便利になった分だけ悪意ある人が入り込む隙間も一気に広がってしまった状態です</div>
+  <div class="footer">Slide 1 / 2</div>
+</section>
+<section class="slide slide2">
+  <div class="title2">AIガバナンスをめぐる今日の3つの動き</div>
+  <ol class="timeline">
+    <li>偽画像による性被害の多発と各国の摘発・提訴</li>
+    <li>AIエージェント誤操作によるファイル削除事故</li>
+    <li>英国オフコムによる検索・SNSの子ども保護調査</li>
+    <li>企業のガードレール整備と法整備の両輪が課題に</li>
+  </ol>
+  <div class="footer">Slide 2 / 2</div>
+</section>
+</body>
+</html>
