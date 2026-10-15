@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AIガバナンス・デイリー スライド — 2026年10月16日</title>
+<style>
+  :root {
+    color-scheme: dark light;
+    --bg: #0b0d12;
+    --fg: #f2f4f8;
+    --accent: #7dd3fc;
+    --muted: #9aa4b2;
+    --card: #151a23;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #f7f8fa;
+      --fg: #14181f;
+      --accent: #0369a1;
+      --muted: #5b6472;
+      --card: #ffffff;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: "Hiragino Sans", "Yu Gothic", "Noto Sans JP", -apple-system,
+      BlinkMacSystemFont, sans-serif;
+  }
+  .slide {
+    width: 100%;
+    /* 従来のaspect-ratio:16/9相当の最低高さ。スマホ縦画面では文字量に対して
+       箱が低すぎて上下が切れていたため、高さ固定をやめてコンテンツに合わせて伸ばす */
+    min-height: 56.25vw;
+    aspect-ratio: auto;
+    display: flex;
+    flex-direction: column;
+    /* min-heightを超えて中身が入ったとき、centerだと上端が画面外に出て切れるためsafeで回避 */
+    justify-content: safe center;
+    padding: 5vw 6vw;
+    position: relative;
+    overflow: visible;
+  }
+  .slide + .slide {
+    border-top: 2px solid var(--muted);
+  }
+  .kicker {
+    font-size: clamp(14px, 1.6vw, 20px);
+    color: var(--accent);
+    font-weight: 700;
+    letter-spacing: .05em;
+    margin-bottom: 0.8em;
+  }
+  .message {
+    font-size: clamp(26px, 4vw, 52px);
+    font-weight: 800;
+    line-height: 1.35;
+    margin: 0 0 1em 0;
+  }
+  .points {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: clamp(17px, 2.1vw, 27px);
+    line-height: 1.6;
+  }
+  .points li {
+    margin: 0.6em 0;
+    padding-left: 1.3em;
+    position: relative;
+  }
+  .points li::before {
+    content: "▸";
+    color: var(--accent);
+    position: absolute;
+    left: 0;
+  }
+  .analogy {
+    margin-top: 1.2em;
+    font-size: clamp(15px, 1.7vw, 21px);
+    color: var(--muted);
+    border-left: 4px solid var(--accent);
+    padding: 0.4em 0 0.4em 1em;
+  }
+  .title2 {
+    font-size: clamp(22px, 3vw, 38px);
+    font-weight: 800;
+    margin-bottom: 1em;
+  }
+  .timeline {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: step;
+    font-size: clamp(16px, 1.9vw, 24px);
+    line-height: 1.6;
+  }
+  .timeline li {
+    counter-increment: step;
+    margin: 0.7em 0;
+    padding-left: 2.2em;
+    position: relative;
+  }
+  .timeline li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1.6em;
+    height: 1.6em;
+    line-height: 1.6em;
+    text-align: center;
+    border-radius: 50%;
+    background: var(--accent);
+    color: var(--bg);
+    font-weight: 800;
+    font-size: 0.8em;
+  }
+  .footer {
+    position: absolute;
+    bottom: 3vh;
+    right: 5vw;
+    font-size: clamp(11px, 1.1vw, 14px);
+    color: var(--muted);
+  }
+  /* スマホ縦画面（iPhone想定390px前後）: 16:9のスライド発想を捨て、
+     普通に上から下へ流れるカードとして表示する。clampの下限よりさらに小さく固定する */
+  @media (max-width: 700px), (orientation: portrait) {
+    .slide {
+      min-height: auto;
+      padding: 28px 20px 40px;
+    }
+    .message {
+      font-size: 22px;
+    }
+    .points {
+      font-size: 16px;
+    }
+    .analogy {
+      font-size: 14px;
+    }
+    .title2 {
+      font-size: 20px;
+    }
+    .timeline {
+      font-size: 15px;
+    }
+    .footer {
+      position: static;
+      margin-top: 16px;
+    }
+  }
+</style>
+</head>
+<body>
+<section class="slide slide1">
+  <div class="kicker">AIガバナンス・デイリー ・ 2026年10月16日</div>
+  <p class="message">移民データを使った実験的AI導入は、被害が見える前に歯止めをかけないと手遅れになる</p>
+  <ul class="points">
+    <li>ドイツ連邦政府がAI移民管理法の草案を準備中</li>
+    <li>AlgorithmWatchが警察・行政領域でのAI利用に明確な制限を要求</li>
+    <li>移民は声を上げにくい層で、プライバシー侵害や差別が放置されやすい</li>
+  </ul>
+  <div class="analogy">たとえるなら: オランダの生活保護AI『SyRI』は人権侵害と認定されるまで何年もかかった。制度は動き出す前に止めないと、後からは元に戻せない</div>
+  <div class="footer">Slide 1 / 2</div>
+</section>
+<section class="slide slide2">
+  <div class="title2">規制と攻撃、同時に加速するAIガバナンスの一日</div>
+  <ol class="timeline">
+    <li>ドイツ：AI移民管理法に市民団体が待った</li>
+    <li>米国：8州がOpenAIを提訴（未成年保護）</li>
+    <li>ブラジル：大統領を陥れるAI生成動画に削除命令</li>
+    <li>日本：企業への8時間超の多段階AIエージェント攻撃</li>
+    <li>金融業界：JPMorganが外部AIエージェントの顧客口座アクセスを遮断</li>
+  </ol>
+  <div class="footer">Slide 2 / 2</div>
+</section>
+</body>
+</html>
