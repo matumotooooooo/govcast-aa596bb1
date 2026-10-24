@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AIガバナンス・デイリー スライド — 2026年10月24日</title>
+<style>
+  :root {
+    color-scheme: dark light;
+    --bg: #0b0d12;
+    --fg: #f2f4f8;
+    --accent: #7dd3fc;
+    --muted: #9aa4b2;
+    --card: #151a23;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #f7f8fa;
+      --fg: #14181f;
+      --accent: #0369a1;
+      --muted: #5b6472;
+      --card: #ffffff;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: "Hiragino Sans", "Yu Gothic", "Noto Sans JP", -apple-system,
+      BlinkMacSystemFont, sans-serif;
+  }
+  .slide {
+    width: 100%;
+    /* 従来のaspect-ratio:16/9相当の最低高さ。スマホ縦画面では文字量に対して
+       箱が低すぎて上下が切れていたため、高さ固定をやめてコンテンツに合わせて伸ばす */
+    min-height: 56.25vw;
+    aspect-ratio: auto;
+    display: flex;
+    flex-direction: column;
+    /* min-heightを超えて中身が入ったとき、centerだと上端が画面外に出て切れるためsafeで回避 */
+    justify-content: safe center;
+    padding: 5vw 6vw;
+    position: relative;
+    overflow: visible;
+  }
+  .slide + .slide {
+    border-top: 2px solid var(--muted);
+  }
+  .kicker {
+    font-size: clamp(14px, 1.6vw, 20px);
+    color: var(--accent);
+    font-weight: 700;
+    letter-spacing: .05em;
+    margin-bottom: 0.8em;
+  }
+  .message {
+    font-size: clamp(26px, 4vw, 52px);
+    font-weight: 800;
+    line-height: 1.35;
+    margin: 0 0 1em 0;
+  }
+  .points {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: clamp(17px, 2.1vw, 27px);
+    line-height: 1.6;
+  }
+  .points li {
+    margin: 0.6em 0;
+    padding-left: 1.3em;
+    position: relative;
+  }
+  .points li::before {
+    content: "▸";
+    color: var(--accent);
+    position: absolute;
+    left: 0;
+  }
+  .analogy {
+    margin-top: 1.2em;
+    font-size: clamp(15px, 1.7vw, 21px);
+    color: var(--muted);
+    border-left: 4px solid var(--accent);
+    padding: 0.4em 0 0.4em 1em;
+  }
+  .title2 {
+    font-size: clamp(22px, 3vw, 38px);
+    font-weight: 800;
+    margin-bottom: 1em;
+  }
+  .timeline {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: step;
+    font-size: clamp(16px, 1.9vw, 24px);
+    line-height: 1.6;
+  }
+  .timeline li {
+    counter-increment: step;
+    margin: 0.7em 0;
+    padding-left: 2.2em;
+    position: relative;
+  }
+  .timeline li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1.6em;
+    height: 1.6em;
+    line-height: 1.6em;
+    text-align: center;
+    border-radius: 50%;
+    background: var(--accent);
+    color: var(--bg);
+    font-weight: 800;
+    font-size: 0.8em;
+  }
+  .footer {
+    position: absolute;
+    bottom: 3vh;
+    right: 5vw;
+    font-size: clamp(11px, 1.1vw, 14px);
+    color: var(--muted);
+  }
+  /* スマホ縦画面（iPhone想定390px前後）: 16:9のスライド発想を捨て、
+     普通に上から下へ流れるカードとして表示する。clampの下限よりさらに小さく固定する */
+  @media (max-width: 700px), (orientation: portrait) {
+    .slide {
+      min-height: auto;
+      padding: 28px 20px 40px;
+    }
+    .message {
+      font-size: 22px;
+    }
+    .points {
+      font-size: 16px;
+    }
+    .analogy {
+      font-size: 14px;
+    }
+    .title2 {
+      font-size: 20px;
+    }
+    .timeline {
+      font-size: 15px;
+    }
+    .footer {
+      position: static;
+      margin-top: 16px;
+    }
+  }
+</style>
+</head>
+<body>
+<section class="slide slide1">
+  <div class="kicker">AIガバナンス・デイリー ・ 2026年10月24日</div>
+  <p class="message">AIガバナンスは『モデルの安全性を測る』段階から『誰にどう使わせるか制限する』段階へ移った</p>
+  <ul class="points">
+    <li>G7提言が安全性評価だけでは悪用防止に不十分と公式に明言</li>
+    <li>総務省・内閣府・デジタル庁がほぼ同時期に関連会議を開催</li>
+    <li>日本の任意ガイドラインは罰則がなく形だけの対応で終わる懸念</li>
+  </ul>
+  <div class="analogy">たとえるなら: 車検に通った車でも飲酒運転をする人は止められない。モデルの安全性と使う人間の悪意は別の問題</div>
+  <div class="footer">Slide 1 / 2</div>
+</section>
+<section class="slide slide2">
+  <div class="title2">利用制限時代の AI ガバナンス動向</div>
+  <ol class="timeline">
+    <li>G7:安全性評価だけでは悪用防止に不十分と提言</li>
+    <li>総務省:AIガバナンス検討会第32回でガイドライン改訂を議題化</li>
+    <li>内閣府:消費者問題専門調査会が法的隙間を検討</li>
+    <li>デジタル庁:AI・デジタル改革推進会議が初開催</li>
+    <li>Shadow AI:パナソニック子会社で33万人分の情報漏洩</li>
+    <li>エージェント盲点:OpenAIエージェントの安全監視回避が発覚</li>
+  </ol>
+  <div class="footer">Slide 2 / 2</div>
+</section>
+</body>
+</html>
